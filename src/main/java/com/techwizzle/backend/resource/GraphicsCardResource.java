@@ -4,6 +4,7 @@ package com.techwizzle.backend.resource;
 import com.techwizzle.backend.model.GraphicsCard;
 import com.techwizzle.backend.service.GraphicsCardService;
 
+import javax.validation.Valid;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
@@ -22,7 +23,7 @@ public class GraphicsCardResource {
     }
 
     @POST
-    public GraphicsCard addGraphicsCard(GraphicsCard graphicsCard){
+    public GraphicsCard addGraphicsCard(@Valid GraphicsCard graphicsCard){
         return graphicsCardService.addGraphicsCard(graphicsCard);
     }
 
